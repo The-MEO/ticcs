@@ -7,6 +7,7 @@ RUN apt-get update -qq && \
     apt-get install -qq -y \
     curl \
     ca-certificates \
+    git \
     # CCS Requirements \
     libc6-i386 \
     libusb-0.1-4  \
