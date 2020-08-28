@@ -20,6 +20,7 @@ RUN apt-get update -qq && \
 #    libgtk2.0-0  \
 #    build-essential
 
+SHELL ["/bin/bash", "-c"]
 RUN if [[ ${DOCKER_TAG} == *"all"* ]]; then COMPONENTS=all;fi;
 RUN if [ "${COMPONENTS}" = "all" ]; then COMPONENTS=PF_MSP430,PF_MSP432,PF_CC2X,PF_CC3X,PF_CC2538,PF_C28,PF_TM4C,PF_PGA,PF_HERCULES,PF_SITARA,PF_OMAPL,PF_DAVINCI,PF_OMAP,PF_TDA_DRA,PF_C55,PF_C6000SC,PF_C66AK_KEYSTONE,PF_MMWAVE,PF_C64MC,PF_DIGITAL_POWER; fi;
 
